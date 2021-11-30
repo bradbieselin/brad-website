@@ -1,15 +1,16 @@
 import { FC } from "react";
+import NavItems from "../nav-items";
 
 export interface NavBarProps { };
-
-const Links = ["Home", "About", "Resume", "Contact"];
 
 const NavBar: FC<NavBarProps> = () => {
     return (
         <div className="NavBar">
-            Hello
+            <NavItems />
             <style jsx>{`
                 .NavBar {
+                    display: flex;
+                    justify-content: flex-end;
                     height: 5%;
                     width: 100%;
                     color: white;
