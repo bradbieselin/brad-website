@@ -15,6 +15,9 @@ const NavBar: FC<NavBarProps> = () => {
             width: 100%;
             color: white;
             position: fixed;
+            background-color: black;
+            z-index: 10;
+            padding-bottom: 1rem;
           }
         `}
       </style>
