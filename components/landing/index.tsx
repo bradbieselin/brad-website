@@ -10,16 +10,16 @@ const Landing: FC<LandingProps> = () => {
         <img src="/Headshot.jpg" className="Landing__Image" />
       </div>
       <div className="Landing__TextContainer">
-        <div className="Landing__Text__Name">Brad Bieselin</div>
-        <div className="Landing__Text__Freelance">-Freelance Web Developer</div>
-        <div className="Landing__Text__Company">-Company: Witbe Inc</div>
-        <div className="Landing__Text__CompanyRole">
+        <div className="Landing__TextName">Brad Bieselin</div>
+        <div className="Landing__TextFreelance">-Freelance Web Developer</div>
+        <div className="Landing__TextCompany">-Company: Witbe Inc</div>
+        <div className="Landing__TextCompanyRole">
           -Position: Project Manager
         </div>
-        <div className="Landing__Text__School">
+        <div className="Landing__TextSchool">
           -2019 B.S. Computer Science Graduate
         </div>
-        <div className="Landing__Text__Long">
+        <div className="Landing__TextLong">
           -Experience in professional and academic environments
         </div>
       </div>
@@ -40,42 +40,42 @@ const Landing: FC<LandingProps> = () => {
             color: white;
             padding-bottom: 1rem;
           }
-          .Landing__Text__Long {
+          .Landing__TextLong {
             flex-wrap: wrap;
             text-align: left;
             color: white;
             padding-bottom: 1rem;
             font-size: 12px;
           }
-          .Landing__Text__Name {
+          .Landing__TextName {
             flex-wrap: wrap;
             text-align: Landing__Text__Freelance;
             color: white;
             padding-bottom: 1rem;
             font-size: 50px;
           }
-          .Landing__Text__Freelance {
+          .Landing__TextFreelance {
             flex-wrap: wrap;
             text-align: left;
             color: white;
             padding-bottom: 1rem;
             font-size: 25px;
           }
-          .Landing__Text__Company {
+          .Landing__TextCompany {
             flex-wrap: wrap;
             text-align: left;
             color: white;
             padding-bottom: 1rem;
             font-size: 25px;
           }
-          .Landing__Text__CompanyRole {
+          .Landing__TextCompanyRole {
             flex-wrap: wrap;
             text-align: left;
             color: white;
             padding-bottom: 1rem;
             font-size: 25px;
           }
-          .Landing__Text__School {
+          .Landing__TextSchool {
             flex-wrap: wrap;
             text-align: left;
             color: white;

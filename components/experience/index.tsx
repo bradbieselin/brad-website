@@ -113,7 +113,13 @@ const Experience: FC<ExperienceProps> = () => {
             July 2021-Present: Witbe Customer Success Manager
           </h3>
           <h4 className="vertical-timeline-element-subtitle">New York, NY</h4>
-          <p></p>
+          <p>
+            Manage 7+ customer projects and provide the highest level of customer
+            satisfaction, success with products, and troubleshooting for each
+            customer. Coordinate with the Sales Department for opportunities of
+            future customer purchases. Manage a team of scripters to develop
+            automated scenarios using Witbe robots.
+          </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
 
