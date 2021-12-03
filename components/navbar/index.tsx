@@ -11,12 +11,10 @@ const NavBar: FC<NavBarProps> = () => {
         {`
           .NavBar {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             width: 100%;
             color: white;
             position: fixed;
-            top: 2rem;
-            right: 2rem;
           }
         `}
       </style>
