@@ -18,10 +18,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         {`
           .Layout {
             height: 100vh;
+            padding-left: 10%;
+            padding-right: 10%;
             background-color: black;
-            margin-left: auto;
-            margin-right: auto;
-            overflow: hidden;
           }
         `}
       </style>
