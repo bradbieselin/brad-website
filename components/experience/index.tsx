@@ -22,8 +22,8 @@ const Experience: FC<ExperienceProps> = () => {
           </h3>
           <h4 className="vertical-timeline-element-subtitle">Albany, NY</h4>
           <p>
-            Member of Men's Club Lacrosse, and Alpha Phi Omega Service
-            Fraternity.
+            {`Member of Men's Club Lacrosse, and Alpha Phi Omega Service
+            Fraternity.`}
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
