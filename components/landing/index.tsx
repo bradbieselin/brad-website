@@ -104,7 +104,7 @@ const Landing: FC<LandingProps> = () => {
             }
             .Landing__Image {
               padding-top: 5rem;
-              width: auto;
+              width: 100%;
               height: auto;
               padding-left: 20rem;
             }
