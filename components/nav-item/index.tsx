@@ -1,15 +1,19 @@
 import { FC } from "react";
+import Link from 'next/link';
 
-export interface NavItems {}
+export interface NavItemProps {
+  link: string;
+  linkLabel: string;
+}
 
-const NavItems: FC<NavItems> = () => {
+const NavItem: FC<NavItemProps> = ({ link, linkLabel}) => {
   return (
     <div className="NavItem">
-      <div className="NavText">home</div>
-      <div className="NavText">experience</div>
-      <div className="NavText">resume</div>
-      <div className="NavText">contact</div>
-
+      <Link href={link}>
+        <a>
+          {linkLabel}
+        </a>
+      </Link>
       <style jsx>
         {`
           .NavText {
@@ -29,4 +33,4 @@ const NavItems: FC<NavItems> = () => {
   );
 };
 
-export default NavItems;
+export default NavItem;

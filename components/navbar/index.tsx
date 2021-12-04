@@ -1,12 +1,17 @@
 import { FC } from "react";
-import NavItems from "../nav-items";
+import { NavBarInterface } from "../../lib/contentful/interface";
+import NavItem from "../nav-item";
 
-export interface NavBarProps {}
+export interface NavBarProps {
+  navBar: NavBarInterface;
+}
 
-const NavBar: FC<NavBarProps> = () => {
+const NavBar: FC<NavBarProps> = ({ navBar }) => {
   return (
     <div className="NavBar">
-      <NavItems />
+      {navBar.navItems.map((data, index) => (
+        <NavItem {...data.fields} key={index} />
+      ))}
       <style jsx>
         {`
           .NavBar {
