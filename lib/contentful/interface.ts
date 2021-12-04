@@ -1,26 +1,26 @@
 import { Asset, Entry, RichTextContent } from "contentful";
 
-export interface NavItems {
+export interface NavItemsInterface {
     link: string;
     linkLabel: string;
 }
 
-export interface NavBar {
-    NavItems: NavItems[];
+export interface NavBarInterface {
+    navItems: Entry<NavItemsInterface>[];
 }
 
-export interface Landing {
+export interface LandingInterface {
     image: Asset;
     richText: RichTextContent;
 }
 
-export interface VerticleTimelineElement {
-    dateRange: string;
-    company: string;
-    location: string;
-    description: string;
+export interface VerticleTimelineElementInterface {
+    dateRange?: string;
+    company?: string;
+    location?: string;
+    description?: string;
 }
 
-export interface VerticleTimeline {
-    timelineElements: VerticleTimelineElement[];
+export interface VerticleTimelineInterface {
+    timelineElements: VerticleTimelineElementInterface[];
 }
