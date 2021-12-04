@@ -1,4 +1,5 @@
-import { createClient } from "contentful";
+import { NavBarInterface } from "./interface";
+import { createClient, Entry } from "contentful";
 
 export const contentfulClient = createClient({
     space: process.env.CONTENTFUL_SPACE_ID || 'some-id',
@@ -6,6 +7,11 @@ export const contentfulClient = createClient({
 })
 
 //Fetch Conetnful Nav Content
+export const getNavBarContent = async (id: string): Promise<NavBarInterface>  => {
+    const contentfulNavBarData: Entry<NavBarInterface> = await contentfulClient.getEntry<NavBarInterface>(id);
+    const navBar: NavBarInterface = {...contentfulNavBarData.fields}
+    return navBar;
+}
 
 //Fetch contentful landing content
 
