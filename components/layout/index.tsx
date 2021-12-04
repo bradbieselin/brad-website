@@ -8,6 +8,7 @@ export interface LayoutProps {
 }
 
 const Layout: FC<LayoutProps> = ({ children, navBar }) => {
+  
   return (
     <div className="Layout">
       <Head>
