@@ -7,7 +7,11 @@ const Landing: FC<LandingProps> = () => {
   return (
     <div className="Landing">
       <div className="Landing__ImageContainer">
-        <img src="/Headshot.jpg" className="Landing__Image" />
+        <img
+          src="/Headshot.jpg"
+          className="Landing__Image"
+          alt="Headshot of Brad Bieselin"
+        />
       </div>
       <div className="Landing__TextContainer">
         <div className="Landing__TextName">Brad Bieselin</div>
@@ -44,48 +48,48 @@ const Landing: FC<LandingProps> = () => {
             flex-wrap: wrap;
             text-align: left;
             color: white;
-            padding-bottom: 1rem;
+            padding-bottom: 0.5rem;
             font-size: 12px;
           }
           .Landing__TextName {
             flex-wrap: wrap;
             text-align: Landing__Text__Freelance;
             color: white;
-            padding-bottom: 1rem;
+            padding-bottom: 0.5rem;
             font-size: 50px;
           }
           .Landing__TextFreelance {
             flex-wrap: wrap;
             text-align: left;
             color: white;
-            padding-bottom: 1rem;
+            padding-bottom: 0.5rem;
             font-size: 25px;
           }
           .Landing__TextCompany {
             flex-wrap: wrap;
             text-align: left;
             color: white;
-            padding-bottom: 1rem;
+            padding-bottom: 0.5rem;
             font-size: 25px;
           }
           .Landing__TextCompanyRole {
             flex-wrap: wrap;
             text-align: left;
             color: white;
-            padding-bottom: 1rem;
+            padding-bottom: 0.5rem;
             font-size: 25px;
           }
           .Landing__TextSchool {
             flex-wrap: wrap;
             text-align: left;
             color: white;
-            padding-bottom: 1rem;
+            padding-bottom: 0.5rem;
             font-size: 18px;
           }
           .Landing__TextContainer {
             padding-left: 2rem;
             padding-right: 2rem;
-            padding-top: 2rem;
+            padding-top: 4rem;
             padding-bottom: 8rem;
             width: 100%;
           }
@@ -97,23 +101,21 @@ const Landing: FC<LandingProps> = () => {
               align-items: center;
             }
             .Landing__ImageContainer {
-              margin-left: auto;
-              margin-right: auto;
-              width: 80rem;
-              height: auto;
+              padding-left: 1rem;
+              flex-basis: 50%;
             }
             .Landing__Image {
-              padding-top: 5rem;
-              width: 100%;
+              width: auto;
               height: auto;
-              padding-left: 20rem;
+              padding-left: 8rem;
+              padding-bottom: 5rem;
             }
             .Landing__TextContainer {
-              padding-left: 10rem;
               padding-top: 15rem;
+              padding-left: 5rem;
+              flex-basis: 50%;
             }
             .Landing__Text {
-              padding-right: 20rem;
               text-align: center;
               color: white;
             }
