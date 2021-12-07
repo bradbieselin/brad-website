@@ -7,7 +7,11 @@ const Landing: FC<LandingProps> = () => {
   return (
     <div className="Landing">
       <div className="Landing__ImageContainer">
-        <img src="/Headshot.jpg" className="Landing__Image" />
+        <img
+          src="/Headshot.jpg"
+          className="Landing__Image"
+          alt="Headshot of Brad Bieselin"
+        />
       </div>
       <div className="Landing__TextContainer">
         <div className="Landing__TextName">Brad Bieselin</div>
