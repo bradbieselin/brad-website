@@ -17,6 +17,7 @@ const NavItems: FC<NavItems> = () => {
           }
           .NavText:hover {
             text-decoration: underline;
+            cursor: pointer;
           }
           .NavItem {
             display: flex;
