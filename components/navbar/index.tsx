@@ -5,8 +5,8 @@ export interface NavBarProps {}
 
 const NavBar: FC<NavBarProps> = () => {
   return (
-    <div>
-      <header className="NavBar">
+    <div className="NavBar">
+      <header className="NavBar__Header">
         <nav>
           <ul className="NavBar__UL">
             <NavItems />
@@ -15,16 +15,12 @@ const NavBar: FC<NavBarProps> = () => {
       </header>
       <style jsx>
         {`
-          .header {
-            margin: 0 auto;
-            padding: 1rem;
-          }
           .NavBar__UL {
             list-style-type: none;
             margin: 0;
             padding: 0;
           }
-          .NavBar {
+          .NavBar__Header {
             display: flex;
             justify-content: flex-end;
             flex-flow: row wrap;

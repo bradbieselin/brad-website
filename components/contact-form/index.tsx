@@ -4,10 +4,10 @@ export interface ContactFormProps {}
 
 const ContactForm: FC<ContactFormProps> = () => {
   return (
-    <div className="ContactForm__Container">
-      <div className="ContactHeader">Contact Me</div>
-      <div className="border"></div>
-      <form className="ContactForm" action="">
+    <div className="ContactForm">
+      <div className="ContactForm__Header">Contact Me</div>
+      <div className="ContactForm__Border"></div>
+      <form className="ContactForm__Details" action="">
         <input
           type="text"
           className="ContactForm__Text"
@@ -34,20 +34,20 @@ const ContactForm: FC<ContactFormProps> = () => {
         ></input>
       </form>
       <style jsx>{`
-        .ContactForm__Container {
+        .ContactForm {
           background: black;
           width: 100%;
           height: 100vh;
           position: relative;
         }
-        .ContactHeader {
+        .ContactForm__Header {
           text-align: center;
           color: white;
           font-family: "monsterrat", sans-serif;
           padding-top: 5rem;
           font-size: 50px;
         }
-        .ContactForm {
+        .ContactForm__Details {
           padding: 40px 0;
           text-align: center;
           background: black;
@@ -56,7 +56,7 @@ const ContactForm: FC<ContactFormProps> = () => {
           padding: 0 10px;
           overflow: hidden;
         }
-        .border {
+        .ContactForm__Border {
           width: 100px;
           height: 10px;
           background: white;
