@@ -7,7 +7,7 @@ const NavItems: FC<NavItems> = () => {
     <div className="NavItem">
       <div className="NavText">home</div>
       <div className="NavText">experience</div>
-      <div className="NavText">resume</div>
+      <div className="NavText">projects</div>
       <div className="NavText">contact</div>
 
       <style jsx>

@@ -5,7 +5,7 @@ export interface LandingProps {}
 
 const Landing: FC<LandingProps> = () => {
   return (
-    <div className="Landing">
+    <div className="Landing" id="landing">
       <div className="Landing__ImageContainer">
         <img
           src="/Headshot.jpg"
@@ -25,6 +25,17 @@ const Landing: FC<LandingProps> = () => {
         </div>
         <div className="Landing__TextLong">
           -Experience in professional and academic environments
+        </div>
+        <div className="Landing__ResumeContainer">
+          <button className="Landing__ResumeButton">
+            <a
+              href="/Bradley_Bieselin_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Brad's Resume
+            </a>
+          </button>
         </div>
       </div>
       <style jsx>
@@ -118,6 +129,13 @@ const Landing: FC<LandingProps> = () => {
             .Landing__Text {
               text-align: center;
               color: white;
+            }
+            .Landing__ResumeButton {
+              margin-top: 1rem;
+              outline: 0;
+            }
+            .Landing__ResumeButton:hover {
+              cursor: pointer;
             }
           }
         `}
