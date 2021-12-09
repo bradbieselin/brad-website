@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Image from "next/image";
 
 export interface LandingProps {}
 
@@ -33,7 +32,7 @@ const Landing: FC<LandingProps> = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Brad's Resume
+              {`Brad's Resume`}
             </a>
           </button>
         </div>

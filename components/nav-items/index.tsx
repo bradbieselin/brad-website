@@ -5,10 +5,18 @@ export interface NavItems {}
 const NavItems: FC<NavItems> = () => {
   return (
     <div className="NavItem">
-      <div className="NavText">home</div>
-      <div className="NavText">experience</div>
-      <div className="NavText">projects</div>
-      <div className="NavText">contact</div>
+      <a href="#landing">
+        <div className="NavText">home</div>
+      </a>
+      <a href="#experience">
+        <div className="NavText">experience</div>
+      </a>
+      <a href="#">
+        <div className="NavText">projects</div>
+      </a>
+      <a href="#contact">
+        <div className="NavText">contact</div>
+      </a>
 
       <style jsx>
         {`

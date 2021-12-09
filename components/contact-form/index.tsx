@@ -3,8 +3,11 @@ import { FC } from "react";
 export interface ContactFormProps {}
 
 const ContactForm: FC<ContactFormProps> = () => {
+  function ValidateEmail(event, inputText) {
+    event.preventDefault();
+  }
   return (
-    <div className="ContactForm">
+    <div className="ContactForm" id="contact">
       <div className="ContactForm__Header">Contact Me</div>
       <div className="ContactForm__Border"></div>
       <form className="ContactForm__Details" action="">
@@ -31,6 +34,7 @@ const ContactForm: FC<ContactFormProps> = () => {
           type="submit"
           className="ContactForm__Button"
           value="Send Email"
+          onClick={ValidateEmail}
         ></input>
       </form>
       <style jsx>{`
