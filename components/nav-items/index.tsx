@@ -1,22 +1,23 @@
 import { FC } from "react";
+import { Link } from "react-scroll"
 
-export interface NavItems {}
+export interface NavItems { }
 
 const NavItems: FC<NavItems> = () => {
   return (
     <div className="NavItem">
-      <a href="#landing">
-        <div className="NavText">home</div>
-      </a>
-      <a href="#experience">
-        <div className="NavText">experience</div>
-      </a>
-      <a href="#">
-        <div className="NavText">projects</div>
-      </a>
-      <a href="#contact">
-        <div className="NavText">contact</div>
-      </a>
+      <div className="NavText">
+        <Link to="landing" smooth={true}>home</Link>
+      </div>
+      <div className="NavText">
+        <Link to="experience" smooth={true}>experience</Link>
+      </div>
+      <div className="NavText">
+        <Link to="#" smooth={true}>projects</Link>
+      </div>
+      <div className="NavText">
+        <Link to="contact" smooth={true}>contact</Link>
+      </div>
 
       <style jsx>
         {`
