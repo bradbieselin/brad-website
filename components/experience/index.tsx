@@ -9,7 +9,7 @@ export interface ExperienceProps {}
 
 const Experience: FC<ExperienceProps> = () => {
   return (
-    <div className="Experience__Background">
+    <div className="Experience" id="experience">
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -114,18 +114,19 @@ const Experience: FC<ExperienceProps> = () => {
           </h3>
           <h4 className="vertical-timeline-element-subtitle">New York, NY</h4>
           <p>
-            Manage 7+ customer projects and provide the highest level of customer
-            satisfaction, success with products, and troubleshooting for each
-            customer. Coordinate with the Sales Department for opportunities of
-            future customer purchases. Manage a team of scripters to develop
-            automated scenarios using Witbe robots.
+            Manage 7+ customer projects and provide the highest level of
+            customer satisfaction, success with products, and troubleshooting
+            for each customer. Coordinate with the Sales Department for
+            opportunities of future customer purchases. Manage a team of
+            scripters to develop automated scenarios using Witbe robots.
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
 
       <style jsx>{`
 
-          .Experience__Background {
+          .Experience {
+            padding-top: 5rem;
             width: 100%;
             background: black;
           }

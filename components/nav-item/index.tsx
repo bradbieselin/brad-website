@@ -1,20 +1,20 @@
 import { FC } from "react";
+import { Link } from "react-scroll";
 
-export interface NavItems {}
+export interface NavItemProps {
+  link: string;
+  label: string;
+}
 
-const NavItems: FC<NavItems> = () => {
+const NavItem: FC<NavItemProps> = ({ link, label }) => {
   return (
     <div className="NavItem">
-      <div className="NavText">home</div>
-      <div className="NavText">experience</div>
-      <div className="NavText">resume</div>
-      <div className="NavText">contact</div>
+      <Link to={link} smooth={true}>
+        {label}
+      </Link>
 
       <style jsx>
         {`
-          .NavText {
-            padding-right: 0.5rem;
-          }
           .NavText:hover {
             text-decoration: underline;
             cursor: pointer;
@@ -30,4 +30,4 @@ const NavItems: FC<NavItems> = () => {
   );
 };
 
-export default NavItems;
+export default NavItem;

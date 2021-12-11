@@ -1,115 +1,173 @@
 import { FC } from "react";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useState, useRef }  from "react";
+import SimpleReactValidator from 'simple-react-validator';
+import Fade from 'react-reveal/Fade';
 
 export interface ContactFormProps {}
 
-type FormValues = {
-  ContactForm__FirstName: string;
-  ContactForm__LastName: string;
-  ContactForm__Email: string;
-};
-
 const ContactForm: FC<ContactFormProps> = () => {
-  const { register, handleSubmit } = useForm<FormValues>();
-  return (
-    <div className="ContactForm__Container">
-      <form
-        onSubmit={handleSubmit((data) => {
-          console.log(data);
-        })}
-        className="ContactForm"
-        action=""
-      >
-        <div className="ContactForm__MessageBox">
-          <label htmlFor="ContactForm__MessageBox">Message:</label>
-          <textarea
-            className="ContactForm__TextArea"
-            id="ContactForm__TextArea"
-          ></textarea>
-        </div>
+  const validator = useRef(new SimpleReactValidator())
+  const [, forceUpdate] = useState();
 
-        <div className="ContactForm__Details">
-          <label htmlFor="ContactForm__FirstName">First Name:</label>
-          <input
-            {...register("ContactForm__FirstName")}
-            id="ContactForm__FirstName"
-            type="text"
-            name=""
-            className="ContactForm__InputArea"
-          />
-          <label htmlFor="ContactForm__LastName">Last Name:</label>
-          <input
-            {...register("ContactForm__LastName")}
-            id="ContactForm__LastName"
-            type="text"
-            name=""
-            className="ContactForm__InputArea"
-          />
-          <label htmlFor="ContactForm__Email">Email:</label>
-          <input
-            {...register("ContactForm__Email")}
-            id="ContactForm__Email"
-            type="email"
-            name=""
-            className="ContactForm__InputArea"
-          />
-          <button className="ContactForm__SubmitButton" type="submit">
-            Submit
-          </button>
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [btnShow, setBtnShow] = useState(true);
+  const [submitResult, setSubmitResult] = useState("");
+
+  function submitForm() {
+    if (validator.current.allValid()) {
+      setSubmitResult("Thank you for you message, I will get back to you as soon as possible.");
+      setBtnShow(false);
+    } else {
+      validator.current.showMessages();
+      forceUpdate(null);
+    }
+  }
+
+  return (
+    <div className="ContactForm" id="contact">
+      <Fade left>
+      <div className="ContactForm__Header">Contact Me</div>
+      </Fade>
+      <Fade up>
+      <div className="ContactForm__Border"></div>
+      </Fade>
+      <Fade up>
+      <form className="ContactForm__Details">
+        <div className="FormElement">
+        <input
+          type="text"
+          className="ContactForm__Text"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        ></input>
+        {validator.current.message('name', name, 'required|alpha_space')}
         </div>
-      </form>
+        <div className="FormElement">
+        <input
+          type="email"
+          className="ContactForm__Text" 
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        ></input>
+        {validator.current.message('email', email, 'required|email')}
+        </div>
+        <div className="FormElement">
+        <input
+          type="text"
+          className="ContactForm__Text"
+          placeholder="Phone Number"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+        ></input>
+        {validator.current.message('phone', phone, 'required|phone')}
+        </div>
+        <div className="FormElement">
+        <textarea
+          className="ContactForm__MessageText"
+          placeholder="Your message here"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        ></textarea>
+         {validator.current.message('message', message, 'required|min:20|max:300')}
+         </div>
+
+         {btnShow ? 
+            <div
+              onClick={submitForm}
+              className="ContactForm__Button"
+              >Send Email
+            </div>
+          : 
+            <p>{submitResult}</p>
+          }
+
+        </form>
+        </Fade>
       <style jsx>{`
-        .ContactForm__Container {
-          background: black;
-          height: 100vh;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
         .ContactForm {
-          border-radius: 25px;
-          padding: 1.9rem;
-          max-width: 650px;
-          background-color: #a9a9a9;
+          padding-top: 100px;
+          background: black;
+          width: 100%;
+          height: 100vh;
+          position: relative;
+          color: white;
         }
-        .ContactForm__MessageBox {
-          display: flex;
-          flex-direction: column;
-          order: 2;
-        }
-        .ContactForm__TextArea {
-          flex: 1;
-          min-width: 18rem;
-          background: transparent;
-          color: #fff;
-          padding: 15px;
+        .ContactForm__Header {
+          text-align: center;
+          color: white;
+          font-family: "monsterrat", sans-serif;
+          padding-top: 5rem;
+          font-size: 50px;
         }
         .ContactForm__Details {
-          flex: 1;
-          order: 1;
-          margin-right: 2rem;
+          padding: 40px 0;
+          text-align: center;
+          background: black;
+          max-width: 650px;
+          margin: auto;
+          padding: 0 10px;
+          overflow: hidden;
         }
-        .ContactForm__InputArea {
+        .ContactForm__Border {
+          width: 100px;
+          height: 10px;
+          background: white;
+          margin: 40px auto;
+        }
+        .ContactForm__Text {
+          display: block;
           width: 100%;
-          background: transparent;
-          color: #fff;
-          border-radius: 40px;
-          padding-bottom: 1rem;
-          margin-bottom: 1rem;
-        }
-        .ContactForm__SubmitButton {
-          padding: 1 rem;
-          margin-bottom: 1rem;
-          background: tomato;
-          color: #fff;
+          box-sizing: border-box;
+          margin: 10px 0;
           border: 0;
-          padding: 15px 50px;
-          border-radius: 40px;
-          font-size: 16px;
-          text-transform: uppercase;
+          padding: 8px 40px;
+          outline: none;
+          transition: 0.5s;
         }
+        .ContactForm__MessageText {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+          margin: 10px 0;
+          border: 0;
+          padding: 30px 40px;
+          outline: none;
+          transition: 0.5s;
+          resize: none;
+          height: 250px;
+        }
+        .ContactForm__MessageText:focus {
+          box-shadow: 0 0 10px 10px #34495e;
+        }
+        .ContactForm__Text:focus {
+          box-shadow: 0 0 10px 10px #34495e;
+        }
+        .ContactForm__Button {
+          background: white;
+          color: black;
+          border: 0;
+          padding: 12px 50px;
+          cursor: pointer;
+          transition: 0.5s;
+        }
+        .ContactForm__Button:hover {
+          background: black;
+          color: white;
+          border-style: solid;
+          border-color: white;
+          border-width: 1px;
+        }
+        .FormElement {
+          p {
+            color: white;
+          }
+        }
+
       `}</style>
     </div>
   );
