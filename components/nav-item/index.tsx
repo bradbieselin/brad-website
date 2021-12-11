@@ -1,12 +1,12 @@
 import { FC } from "react";
 import { Link } from "react-scroll";
 
-export interface NavItem {
+export interface NavItemProps {
   link: string;
   label: string;
 }
 
-const NavItem: FC<NavItem> = ({ link, label }) => {
+const NavItem: FC<NavItemProps> = ({ link, label }) => {
   return (
     <div className="NavItem">
       <Link to={link} smooth={true}>
