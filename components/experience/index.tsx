@@ -9,7 +9,7 @@ export interface ExperienceProps {}
 
 const Experience: FC<ExperienceProps> = () => {
   return (
-    <div className="Experience__Background" id="experience">
+    <div className="Experience" id="experience">
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -125,7 +125,7 @@ const Experience: FC<ExperienceProps> = () => {
 
       <style jsx>{`
 
-          .Experience__Background {
+          .Experience {
             padding-top: 5rem;
             width: 100%;
             background: black;
