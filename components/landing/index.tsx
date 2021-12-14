@@ -22,7 +22,9 @@ const Landing: FC<LandingProps> = () => {
             <div className="Landing__TextFreelance">
               -Freelance Web Developer
             </div>
-            <div className="Landing__TextCompany">-Company: Witbe Inc</div>
+            <div className="Landing__TextCompany">
+              -Current Company: Witbe Inc
+            </div>
             <div className="Landing__TextCompanyRole">
               -Position: Project Manager
             </div>
@@ -53,7 +55,7 @@ const Landing: FC<LandingProps> = () => {
             background: black;
           }
           .Landing__Image {
-            padding-top: 7rem;
+            padding-top: 2rem;
             width: 100%;
             height: auto;
           }
@@ -72,31 +74,30 @@ const Landing: FC<LandingProps> = () => {
           }
           .Landing__TextName {
             flex-wrap: wrap;
-            text-align: Landing__Text__Freelance;
             color: white;
             padding-bottom: 0.5rem;
-            font-size: 50px;
+            font-size: 30px;
           }
           .Landing__TextFreelance {
             flex-wrap: wrap;
             text-align: left;
             color: white;
             padding-bottom: 0.5rem;
-            font-size: 25px;
+            font-size: 20px;
           }
           .Landing__TextCompany {
             flex-wrap: wrap;
             text-align: left;
             color: white;
             padding-bottom: 0.5rem;
-            font-size: 25px;
+            font-size: 20px;
           }
           .Landing__TextCompanyRole {
             flex-wrap: wrap;
             text-align: left;
             color: white;
             padding-bottom: 0.5rem;
-            font-size: 25px;
+            font-size: 20px;
           }
           .Landing__TextSchool {
             flex-wrap: wrap;
@@ -144,9 +145,60 @@ const Landing: FC<LandingProps> = () => {
             .Landing__ResumeButton {
               margin-top: 1rem;
               outline: 0;
+              background: white;
+              color: black;
+              border: 0;
+              padding: 6px 15px;
+              cursor: pointer;
+              transition: 0.5s;
             }
             .Landing__ResumeButton:hover {
-              cursor: pointer;
+              background: black;
+              color: white;
+              border-style: solid;
+              border-color: white;
+              border-width: 1px;
+            }
+            .Landing__TextLong {
+              flex-wrap: wrap;
+              text-align: left;
+              color: white;
+              padding-bottom: 0.5rem;
+              font-size: 15px;
+            }
+            .Landing__TextName {
+              flex-wrap: wrap;
+              color: white;
+              padding-bottom: 0.5rem;
+              font-size: 50px;
+            }
+            .Landing__TextFreelance {
+              flex-wrap: wrap;
+              text-align: left;
+              color: white;
+              padding-bottom: 0.5rem;
+              font-size: 25px;
+            }
+            .Landing__TextCompany {
+              flex-wrap: wrap;
+              text-align: left;
+              color: white;
+              padding-bottom: 0.5rem;
+              font-size: 25px;
+            }
+            .Landing__TextCompanyRole {
+              flex-wrap: wrap;
+              text-align: left;
+              color: white;
+              padding-bottom: 0.5rem;
+              font-size: 25px;
+            }
+            .Landing__TextSchool {
+              flex-wrap: wrap;
+              text-align: left;
+              color: white;
+              padding-bottom: 0.5rem;
+              font-size: 20px;
             }
           }
         `}

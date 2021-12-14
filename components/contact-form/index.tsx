@@ -2,6 +2,7 @@ import { FC } from "react";
 import { useState, useRef } from "react";
 import SimpleReactValidator from "simple-react-validator";
 import Fade from "react-reveal/Fade";
+import emailjs from "emailjs-com";
 
 export interface ContactFormProps {}
 
@@ -16,7 +17,8 @@ const ContactForm: FC<ContactFormProps> = () => {
   const [btnShow, setBtnShow] = useState(true);
   const [submitResult, setSubmitResult] = useState("");
 
-  function submitForm() {
+  function submitForm(e) {
+    e.preventDefault();
     if (validator.current.allValid()) {
       setSubmitResult(
         "Thank you for you message, I will get back to you as soon as possible."
