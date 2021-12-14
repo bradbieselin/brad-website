@@ -1,42 +1,51 @@
 import { FC } from "react";
+import Fade from "react-reveal/Fade";
 
 export interface LandingProps {}
 
 const Landing: FC<LandingProps> = () => {
   return (
     <div className="Landing" id="landing">
-      <div className="Landing__ImageContainer">
-        <img
-          src="/Headshot.jpg"
-          className="Landing__Image"
-          alt="Headshot of Brad Bieselin"
-        />
-      </div>
-      <div className="Landing__TextContainer">
-        <div className="Landing__TextName">Brad Bieselin</div>
-        <div className="Landing__TextFreelance">-Freelance Web Developer</div>
-        <div className="Landing__TextCompany">-Company: Witbe Inc</div>
-        <div className="Landing__TextCompanyRole">
-          -Position: Project Manager
+      <Fade>
+        <div className="Landing__ImageContainer">
+          <img
+            src="/Headshot.jpg"
+            className="Landing__Image"
+            alt="Headshot of Brad Bieselin"
+          />
         </div>
-        <div className="Landing__TextSchool">
-          -2019 B.S. Computer Science Graduate
+      </Fade>
+      <Fade>
+        <div className="Landing__TextContainer">
+          <div className="Landing__TextBox">
+            <div className="Landing__TextName">Brad Bieselin</div>
+            <div className="Landing__TextFreelance">
+              -Freelance Web Developer
+            </div>
+            <div className="Landing__TextCompany">-Company: Witbe Inc</div>
+            <div className="Landing__TextCompanyRole">
+              -Position: Project Manager
+            </div>
+            <div className="Landing__TextSchool">
+              -2019 B.S. Computer Science Graduate
+            </div>
+            <div className="Landing__TextLong">
+              -Experience in professional and academic environments
+            </div>
+            <div className="Landing__ResumeContainer">
+              <button className="Landing__ResumeButton">
+                <a
+                  href="/Bradley_Bieselin_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {`Brad's Resume`}
+                </a>
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="Landing__TextLong">
-          -Experience in professional and academic environments
-        </div>
-        <div className="Landing__ResumeContainer">
-          <button className="Landing__ResumeButton">
-            <a
-              href="/Bradley_Bieselin_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {`Brad's Resume`}
-            </a>
-          </button>
-        </div>
-      </div>
+      </Fade>
       <style jsx>
         {`
           .Landing {
@@ -105,25 +114,28 @@ const Landing: FC<LandingProps> = () => {
           }
           @media (min-width: 1025px) {
             .Landing {
-              display: flex;
               width: 100%;
               height: 100%;
-              align-items: center;
+              display: flex;
             }
             .Landing__ImageContainer {
-              padding-left: 1rem;
-              flex-basis: 50%;
+              width: 50%;
+              display: flex;
+              justify-content: right;
             }
             .Landing__Image {
+              border-radius: 50%;
+              padding-bottom: 4rem;
               width: auto;
               height: auto;
-              padding-left: 8rem;
-              padding-bottom: 5rem;
             }
             .Landing__TextContainer {
-              padding-top: 15rem;
-              padding-left: 5rem;
-              flex-basis: 50%;
+              width: 50%;
+              height: 100%;
+            }
+            .Landing__TextBox {
+              padding-top: 18rem;
+              padding-left: 2rem;
             }
             .Landing__Text {
               text-align: center;
