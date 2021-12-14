@@ -36,7 +36,7 @@ const ContactForm: FC<ContactFormProps> = () => {
         <div className="ContactForm__Header">Contact Me</div>
       </Fade>
       <Fade up>
-        <div className="ContactForm__Border"></div>
+        <div className="ContactForm__Border" />
       </Fade>
       <Fade up>
         <form className="ContactForm__Details">
