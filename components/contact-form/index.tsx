@@ -2,14 +2,12 @@ import { FC } from "react";
 import { useState, useRef } from "react";
 import SimpleReactValidator from "simple-react-validator";
 import Fade from "react-reveal/Fade";
-import emailjs from "emailjs-com";
 
 export interface ContactFormProps {}
 
 const ContactForm: FC<ContactFormProps> = () => {
   const validator = useRef(new SimpleReactValidator());
   const [, forceUpdate] = useState();
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");

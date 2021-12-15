@@ -50,68 +50,80 @@ const Landing: FC<LandingProps> = () => {
       </Fade>
       <style jsx>
         {`
-          .Landing {
-            width: 100%;
-            background: black;
-          }
-          .Landing__Image {
-            padding-top: 2rem;
-            width: 100%;
-            height: auto;
-          }
-          .Landing__Text {
-            flex-wrap: wrap;
-            text-align: center;
-            color: white;
-            padding-bottom: 1rem;
-          }
-          .Landing__TextLong {
-            flex-wrap: wrap;
-            text-align: left;
-            color: white;
-            padding-bottom: 0.5rem;
-            font-size: 12px;
-          }
-          .Landing__TextName {
-            flex-wrap: wrap;
-            color: white;
-            padding-bottom: 0.5rem;
-            font-size: 30px;
-          }
-          .Landing__TextFreelance {
-            flex-wrap: wrap;
-            text-align: left;
-            color: white;
-            padding-bottom: 0.5rem;
-            font-size: 20px;
-          }
-          .Landing__TextCompany {
-            flex-wrap: wrap;
-            text-align: left;
-            color: white;
-            padding-bottom: 0.5rem;
-            font-size: 20px;
-          }
-          .Landing__TextCompanyRole {
-            flex-wrap: wrap;
-            text-align: left;
-            color: white;
-            padding-bottom: 0.5rem;
-            font-size: 20px;
-          }
-          .Landing__TextSchool {
-            flex-wrap: wrap;
-            text-align: left;
-            color: white;
-            padding-bottom: 0.5rem;
-            font-size: 18px;
-          }
-          .Landing__TextContainer {
-            padding-left: 2rem;
-            padding-right: 2rem;
-            padding-top: 4rem;
-            padding-bottom: 8rem;
-            width: 100%;
+          @media (max-width: 1025px) {
+            .Landing {
+              width: 100%;
+              background: black;
+            }
+            .Landing__Image {
+              padding-top: 2rem;
+              width: 100%;
+              height: auto;
+            }
+            .Landing__Text {
+              flex-wrap: wrap;
+              text-align: center;
+              color: white;
+              padding-bottom: 1rem;
+            }
+            .Landing__TextLong {
+              flex-wrap: wrap;
+              text-align: left;
+              color: white;
+              padding-bottom: 0.5rem;
+              font-size: 12px;
+            }
+            .Landing__TextName {
+              flex-wrap: wrap;
+              color: white;
+              padding-bottom: 0.5rem;
+              font-size: 30px;
+            }
+            .Landing__TextFreelance {
+              flex-wrap: wrap;
+              text-align: left;
+              color: white;
+              padding-bottom: 0.5rem;
+              font-size: 20px;
+            }
+            .Landing__TextCompany {
+              flex-wrap: wrap;
+              text-align: left;
+              color: white;
+              padding-bottom: 0.5rem;
+              font-size: 20px;
+            }
+            .Landing__TextCompanyRole {
+              flex-wrap: wrap;
+              text-align: left;
+              color: white;
+              padding-bottom: 0.5rem;
+              font-size: 20px;
+            }
+            .Landing__TextSchool {
+              flex-wrap: wrap;
+              text-align: left;
+              color: white;
+              padding-bottom: 0.5rem;
+              font-size: 18px;
+            }
+            .Landing__TextContainer {
+              padding-left: 2rem;
+              padding-right: 2rem;
+              padding-top: 4rem;
+              padding-bottom: 8rem;
+              width: 100%;
+            }
+            .Landing__ResumeButton {
+              margin-top: 1rem;
+              outline: 0;
+              background: white;
+              color: black;
+              border: 0;
+              padding: 6px 10px;
+              cursor: pointer;
+              transition: 0.5s;
+            }
           }
           @media (min-width: 1025px) {
             .Landing {
@@ -128,7 +140,7 @@ const Landing: FC<LandingProps> = () => {
               border-radius: 50%;
               padding-bottom: 4rem;
               width: auto;
-              height: auto;
+              object-fit: contain;
             }
             .Landing__TextContainer {
               width: 50%;
@@ -136,7 +148,7 @@ const Landing: FC<LandingProps> = () => {
             }
             .Landing__TextBox {
               padding-top: 18rem;
-              padding-left: 2rem;
+              padding-left: 5rem;
             }
             .Landing__Text {
               text-align: center;
