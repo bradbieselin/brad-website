@@ -15,14 +15,23 @@ const NavItem: FC<NavItemProps> = ({ link, label }) => {
 
       <style jsx>
         {`
-          .NavText:hover {
-            text-decoration: underline;
-            cursor: pointer;
-          }
           .NavItem {
-            display: flex;
-            padding-top: 1rem;
-            padding-left: 1rem;
+            padding-top: 0.5rem;
+            padding-right: 1rem;
+            display: inline-block;
+            float: left;
+          }
+          @media (min-width: 1025px) {
+            .NavItem:hover {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+            .NavItem {
+              padding-top: 0.5rem;
+              padding-right: 1rem;
+              display: inline-block;
+              float: left;
+            }
           }
         `}
       </style>
